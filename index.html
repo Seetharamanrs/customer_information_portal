@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,59 +6,48 @@
 
 <body>
 
-<h1>Customer Information Portal</h1>
+    <h1>Customer Information Portal</h1>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>City</th>
-    </tr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+        </thead>
 
-    <tr>
-        <td>1</td>
-        <td>Arun K</td>
-        <td>arun@example.com</td>
-        <td>Chennai</td>
-    </tr>
-    
-    <tr>
-        <td>2</td>
-        <td>Priya R</td>
-        <td>priya@example.com</td>
-        <td>Madurai</td>
-    </tr>
-    
-    <tr>
-        <td>3</td>
-        <td>Rahul M</td>
-        <td>rahul@example.com</td>
-        <td>Bangalore</td>
-    </tr>
-    
-    <tr>
-        <td>4</td>
-        <td>Divya S</td>
-        <td>divya@example.com</td>
-        <td>Coimbatore</td>
-    </tr>
-    
-    <tr>
-        <td>5</td>
-        <td>Karthik R</td>
-        <td>karthik@example.com</td>
-        <td>Pune</td>
-    </tr>
-    
-    <tr>
-        <td>6</td>
-        <td>John R</td>
-        <td>John@example.com</td>
-        <td>Mumbai</td>
-    </tr>
-    
-</table>
+        <tbody id="customer-table">
+        </tbody>
+    </table>
+
+    <script>
+        fetch("customers.json")
+            .then(response => response.json())
+            .then(customers => {
+
+                const table = document.getElementById("customer-table");
+
+                customers.forEach(customer => {
+
+                    const row = `
+                        <tr>
+                            <td>${customer.id}</td>
+                            <td>${customer.name}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.city}</td>
+                        </tr>
+                    `;
+
+                    table.innerHTML += row;
+                });
+
+            })
+            .catch(error => {
+                console.error("Error loading customer data:", error);
+            });
+    </script>
 
 </body>
 </html>
