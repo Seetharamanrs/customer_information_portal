@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: customer information Portal Infrastructure
+Resources:
+  CustomerBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+  MyEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref MyEC2Instance
