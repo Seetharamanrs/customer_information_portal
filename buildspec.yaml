@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building Customer Information Portal"
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - index.html
+    - customers.json
