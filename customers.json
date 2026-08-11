@@ -40,5 +40,11 @@
     "name": "Rohan B",
     "email": "Rohan@example.com",
     "city": "Delhi"
+  },
+      {
+    "id": 8,
+    "name": "Smith C",
+    "email": "smith@example.com",
+    "city": "Delhi"
   }
 ]
