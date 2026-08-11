@@ -8,7 +8,8 @@ Resources:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
-  MyEIP:
-    Type: AWS::EC2::EIP
-    Properties:
-      InstanceId: !Ref MyEC2Instance
+Outputs:
+
+  BucketName:
+    Description: Customer portal S3 bucket
+    Value: !Ref CustomerBucket  
