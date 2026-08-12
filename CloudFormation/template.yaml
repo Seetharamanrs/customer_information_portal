@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: customer information Portal Infrastructure
+Resources:
+  CustomerBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+Outputs:
+
+  BucketName:
+    Description: Customer portal S3 bucket
+    Value: !Ref CustomerBucket  

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Arun Kumar",
+    "email": "arun@example.com",
+    "city": "Chennai"
+  },
+  {
+    "id": 2,
+    "name": "Priya Raj",
+    "email": "priya@example.com",
+    "city": "Madurai"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Kumar",
+    "email": "rahul@example.com",
+    "city": "Bangalore"
+  },
+  {
+    "id": 4,
+    "name": "Divya S",
+    "email": "divya@example.com",
+    "city": "Coimbatore"
+  },
+  {
+    "id": 5,
+    "name": "Karthik R",
+    "email": "karthik@example.com",
+    "city": "Mumbai"
+  },
+  {
+    "id": 6,
+    "name": "John R",
+    "email": "John@example.com",
+    "city": "Pune"
+  },
+    {
+    "id": 7,
+    "name": "Rohan B",
+    "email": "Rohan@example.com",
+    "city": "Delhi"
+  },
+      {
+    "id": 8,
+    "name": "Smith C",
+    "email": "smith@example.com",
+    "city": "Delhi"
+  },
+        {
+    "id": 9,
+    "name": "claire C",
+    "email": "claire@example.com",
+    "city": "cochin"
+  },
+          {
+    "id": 10,
+    "name": "Liam M",
+    "email": "Liam@example.com",
+    "city": "cochin"
+  },
+{
+    "id": 11,
+    "name": "Adam D",
+    "email": "Adam@example.com",
+    "city": "Bangalore"
+  },
+  {
+    "id": 12,
+    "name": "Emma R",
+    "email": "Emma@example.com",
+    "city": "Chennai"
+  },
+    {
+    "id": 13,
+    "name": "Rachel B",
+    "email": "Rachel@example.com",
+    "city": "Chennai"
+  },
+      {
+    "id": 14,
+    "name": "kate M",
+    "email": "kate@example.com",
+    "city": "Bangalore"
+  },
+      {
+    "id": 15,
+    "name": "Ray T",
+    "email": "Ray@example.com",
+    "city": "Madurai"
+  },
+      {
+    "id": 16,
+    "name": "Ray T",
+    "email": "Ray@example.com",
+    "city": "Madurai"
+  }
+]
