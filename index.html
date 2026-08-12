@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Information Portal</title>
+</head>
+
+<body>
+
+    <h1>Customer Information Portal</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <tbody id="customer-table">
+        </tbody>
+    </table>
+
+    <script>
+        fetch("customers.json")
+            .then(response => response.json())
+            .then(customers => {
+
+                const table = document.getElementById("customer-table");
+
+                customers.forEach(customer => {
+
+                    const row = `
+                        <tr>
+                            <td>${customer.id}</td>
+                            <td>${customer.name}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.city}</td>
+                        </tr>
+                    `;
+
+                    table.innerHTML += row;
+                });
+
+            })
+            .catch(error => {
+                console.error("Error loading customer data:", error);
+            });
+    </script>
+
+</body>
+</html>
