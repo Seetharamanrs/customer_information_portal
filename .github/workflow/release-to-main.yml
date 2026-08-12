@@ -1,0 +1,21 @@
+name: Enforce Release to Main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-source-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate source branch
+        run: |
+          if [ "${{ github.head_ref }}" != "release" ]; then
+            echo "ERROR: Only the release branch can be merged into main."
+            echo "Source branch: ${{ github.head_ref }}"
+            exit 1
+          fi
+
+          echo "SUCCESS: Pull Request is from the release branch."
